@@ -724,3 +724,7 @@
 	<string>
 	<vector>
 
+1471947328 source:d:\d\178\font\fontresize\test1\main.cpp
+	<iostream>
+	<SFML/Graphics.hpp>
+

@@ -83,6 +83,7 @@ int main()
     int fontSize = 12;
     int half = fontSize/2 + 1;
     int thickness = 1;
+    int i;
 
 
     for(int i = 0; i < 2100; i++){
@@ -140,16 +141,20 @@ int main()
             // "close requested" event: we close the window
             if (event.type == sf::Event::Closed)
                 window.close();
+            if (event.type == sf::Event::KeyPressed)
+            {
+                if (event.text.unicode < 128)
+                    std::cout << "Enter resize percentage (Max: 200%): " << std::endl;
+                    std::cin >> i;
+            }
         }
 
         // clear the window with black color
         window.clear(sf::Color::Black);
-
         window.clear();
         window.draw(map);
         // draw everything here...
         // window.draw(...);
-
         // end the current frame
         window.display();
     }
